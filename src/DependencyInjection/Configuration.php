@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Batch\HeadersBundle\DependencyInjection;
 
+use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 
@@ -12,9 +13,10 @@ final class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder(): TreeBuilder
     {
         $treeBuilder = new TreeBuilder('batch_headers');
+        $rootNode = $treeBuilder->getRootNode();
+        \assert($rootNode instanceof ArrayNodeDefinition);
 
-        // @phpstan-ignore-next-line
-        $treeBuilder->getRootNode()
+        $rootNode
             ->children()
                 ->arrayNode('headers')
                     ->arrayPrototype()

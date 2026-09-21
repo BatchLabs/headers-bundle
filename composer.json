@@ -3,11 +3,11 @@
     "description": "A Symfony bundle to easily add headers to your responses.",
     "type": "symfony-bundle",
     "require": {
-        "php": "^8.0",
-        "symfony/http-kernel": "^6.0",
-        "symfony/dependency-injection": "^6.0",
-        "symfony/config": "^6.0",
-        "symfony/expression-language": "^6.0",
+        "php": "^8.2",
+        "symfony/http-kernel": "^6.4 || ^7.0",
+        "symfony/dependency-injection": "^6.4 || ^7.0",
+        "symfony/config": "^6.4 || ^7.0",
+        "symfony/expression-language": "^6.4 || ^7.0",
         "psr/cache": "^3.0"
     },
     "require-dev": {
